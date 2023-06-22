@@ -56,6 +56,7 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git add -A
           git commit -m "bot push"
+        continue-on-error: true
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
