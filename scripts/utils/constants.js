@@ -12,6 +12,7 @@ try{
 module.exports = {
     token: process.env.GITHUB_TOKEN,
     owner: process.env.GITHUB_OWNER,
+    repository: process.env.GITHUB_REPO,
     repoName: process.env.GITHUB_REPO.split('/')[1],
     number: process.env.GITHUB_ISSUE_NUMBER,
     action: process.env.GITHUB_EVENT_ACTION,
