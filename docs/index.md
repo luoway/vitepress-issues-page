@@ -2,6 +2,8 @@
 Build static websites using GitHub issues, GitHub Actions, and Vitepress without writing any code or making Git commits and pushes.  
 使用GitHub issues + GitHub Actions + Vitepress构建静态网站，无需写代码或操作git提交推送。  
 
+[English docs](https://fecat.win/vitepress-issues-page/1.html)
+
 ## 用法一
 此方法只能fork一次
 
