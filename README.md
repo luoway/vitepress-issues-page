@@ -34,6 +34,6 @@ Build static websites using GitHub issues, GitHub Actions, and Vitepress without
 
 参考以下文件路径，对应到自己仓库文件，进行手动修改
 
-- [顶部标题](https://github.com/luoway/vitepress-issues-page/blob/main/docs/.vitepress/config.js#L6)
+- [顶部标题](https://github.com/luoway/vitepress-issues-page/blob/main/docs/.vitepress/config.js#L7)
 - [首页内容](https://github.com/luoway/vitepress-issues-page/blob/main/docs/index.md)
-- [侧边栏分组](https://github.com/luoway/vitepress-issues-page/blob/main/.labelrc)
+- [侧边栏分组](https://github.com/luoway/vitepress-issues-page/blob/main/.labelrc) 配置规则：每行一个label。多个label展示为多组侧边栏
