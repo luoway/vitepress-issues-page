@@ -10,7 +10,9 @@ export default defineConfig({
           { icon: 'github', link: githubLink },
         ],
         outline: 'deep',
+        sidebarMenuLabel: '菜单',
         outlineTitle: '导航',
+        darkModeSwitchLabel: '夜间模式',
         sidebar,
     },
     locales: {
