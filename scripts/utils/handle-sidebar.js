@@ -78,40 +78,33 @@ function remove(number){
 }
 
 function update(issueData, labels, acceptLabels){
-    console.log('update', issueData, labels, acceptLabels)
     const sidebar = read()
     if(sidebar.length === 0) return write([{node: issueData}], labels)
     
     const number = issueData.number
-    if(acceptLabels?.length === 1){
-        // only one acceptLabel
-        for(let i=0; i<sidebar.length; i++){
-            const item = sidebar[i]
+    const handleList = list=>{
+        let found = false
+        for(let i=0; i<list.length; i++){
+            const item = list[i]
             const currentNum = parseInt(item.link.slice(1))
-            if(currentNum === number) break
-            if(currentNum > number){
-                sidebar.splice(i, 0, genItem(item))
+            if(currentNum >= number){
+                found = true
+                list.splice(i, parseInt(currentNum === number), genItem(issueData))
                 break
             }
         }
+        if(!found){
+            list.push(genItem(issueData))
+        }
+    }
+    
+    if(acceptLabels?.length === 1){
+        // only one acceptLabel
+        handleList(sidebar)
     }else if(acceptLabels.length > 1){
         for(let group of sidebar){
             if(labels.includes(group.text)) {
-                if(group.items.length === 0) {
-                    group.items.push(genItem(issueData))
-                    continue
-                }
-
-                for(let i=0; i<group.items.length; i++){
-                    const item = group.items[i]
-                    const currentNum = parseInt(item.link.slice(1))
-                    
-                    if(currentNum === number) break
-                    if(currentNum > number){
-                        group.items.splice(i, 0, genItem(item))
-                        break
-                    }
-                }
+                handleList(group.items)
             }else{
                 const foundIndex = group.items.findIndex(item=>parseInt(item.link.slice(1)) === number)
                 if(foundIndex > -1) group.items.splice(foundIndex, 1)
