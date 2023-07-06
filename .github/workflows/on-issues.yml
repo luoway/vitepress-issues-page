@@ -32,6 +32,7 @@ jobs:
         
   build:
     runs-on: ubuntu-latest
+    needs: check_owner
     steps:
       - uses: actions/checkout@v3
         with:
