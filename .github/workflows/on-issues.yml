@@ -19,7 +19,7 @@ env:
   GITHUB_EVENT_ACTION: ${{ github.event.action }}
 
 concurrency:
-  group: ${{ github.workflow }}
+  group: ${{ github.workflow }}${{ github.actor }}
   cancel-in-progress: true
 
 jobs:
