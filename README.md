@@ -13,7 +13,7 @@
 3. 在仓库的Settings - General - Features设置项处，启用Issues功能
 4. 在仓库的Settings - Pages - Build and deployment设置项处，将Source配置为Github Actions
 5. 在Issues - Labels处新建标签，命名为deploy
-6. 新建issue，打上deploy标签后，等待约3分钟，即可在首页看到github-pages入口
+6. 新建issue，打上deploy标签后，等待约3分钟，即可在仓库首页看到github-pages入口
 
 ## 用法二
 此方法可以多次使用，但需要使用shell操作完成仓库的初始化。
@@ -31,11 +31,14 @@
     ```
 3. 在仓库的Settings - Pages - Build and deployment设置项处，将Source配置为Github Actions.
 4. 在Issues - Labels处新建标签，命名为deploy
-5. 新建issue，打上deploy标签后，等待约3分钟，即可在首页看到github-pages入口
+5. 新建issue，打上deploy标签后，等待约3分钟，即可在仓库首页看到github-pages入口
+
+## 快捷访问github pages
+点击仓库首页右侧About小齿轮，勾选`Use your GitHub Pages website`，点击`Save changes`，即可在About下显示快速访问链接
 
 ## 页面配置
 
-参考以下文件路径，对应到自己仓库文件，进行手动修改
+点击以下链接，进行手动修改
 
 - [顶部标题](./docs/.vitepress/config.js#L7)
 - [首页内容](./docs/index.md)
