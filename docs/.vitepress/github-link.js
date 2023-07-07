@@ -1,1 +1,1 @@
-export default ''
+export default 'https://github.com/luoway/vitepress-issues-page'
