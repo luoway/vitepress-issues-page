@@ -4,9 +4,8 @@
 
 使用GitHub issues + GitHub Actions + Vitepress构建静态网站，无需写代码或操作git提交推送。  
 
-
 ## 用法一
-此方法只能fork一次
+此方法只能fork一次，最少操作，适合初次尝试。
 
 1. fork[此仓库](https://github.com/luoway/vitepress-issues-page)
 2. 在仓库的Actions页面，启用功能
@@ -16,6 +15,17 @@
 6. 新建issue，打上deploy标签后，等待约3分钟，即可在仓库首页看到github-pages入口
 
 ## 用法二
+此方法可以多次使用，无需操作仓库文件。
+
+1. 新建仓库，在新建仓库页面进入`Import a repository.`
+2. `Your old repository's clone URL*`填写[此仓库链接](https://github.com/luoway/vitepress-issues-page)，完成新建仓库步骤
+3. 在仓库的Settings - Actions - General - Actions permissions设置项处，选择`Allow all actions and reusable workflows`，点击`Save`
+4. 在仓库的Actions页面，启用功能
+5. 在仓库的Settings - Pages - Build and deployment设置项处，将Source配置为Github Actions.
+6. 在Issues - Labels处新建标签，命名为deploy
+7. 新建issue，打上deploy标签后，等待约3分钟，即可在仓库首页看到github-pages入口
+
+## 用法三
 此方法可以多次使用，但需要使用shell操作完成仓库的初始化。
 
 1. 新建一个仓库，例如`luoway/new-repo`，拉取到本地
